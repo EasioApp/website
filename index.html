@@ -1,74 +1,190 @@
 <!DOCTYPE html>
-<html lang="fa" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Easio | ابزار هوشمند مدیریت شیفت و کار</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+    <title>Easio | Smart Shift & Payroll Management Tool</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
     <style>
-        body { font-family: Tahoma, Arial, sans-serif; background-color: #f8f9fa; color: #333; }
-        .hero { background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%); color: white; padding: 80px 0; }
-        .feature-card { border: none; border-radius: 12px; transition: transform 0.2s; }
-        .feature-card:hover { transform: translateY(-5px); }
-        footer { background-color: #212529; color: #aaa; padding: 30px 0; }
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #2b2f34;
+            background-color: #f4f7f6;
+        }
+        .hero {
+            background: linear-gradient(135deg, #0d6efd 0%, #084298 100%);
+            color: #ffffff;
+            padding: 100px 0 80px;
+        }
+        .hero h1 {
+            font-weight: 700;
+            letter-spacing: -1px;
+        }
+        .badge-pill {
+            background-color: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(5px);
+            padding: 8px 16px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+        }
+        .card-feature {
+            border: none;
+            border-radius: 16px;
+            background: #ffffff;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+        }
+        .card-feature:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+        }
+        .icon-wrapper {
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
+            background-color: #e7f1ff;
+            color: #0d6efd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+        }
+        .lang-badge {
+            background: #e9ecef;
+            color: #495057;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-weight: 500;
+            font-size: 0.85rem;
+            display: inline-block;
+            margin: 4px;
+        }
+        .subscribe-card {
+            background: #ffffff;
+            border-radius: 20px;
+            border: 1px solid #eaedf0;
+        }
+        footer {
+            background-color: #0f172a;
+            color: #94a3b8;
+            padding: 40px 0;
+            font-size: 0.9rem;
+        }
     </style>
 </head>
 <body>
 
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark position-absolute w-100">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-3" href="#">Easio</a>
+        </div>
+    </nav>
+
     <!-- Hero Section -->
     <header class="hero text-center">
         <div class="container">
-            <h1 class="display-4 fw-bold mb-3">Easio</h1>
-            <p class="lead mb-4">مدیریت ساده، دقیق و هوشمند شیفت‌های کاری و محاسبات مالی</p>
-            <a href="#contact" class="btn btn-light btn-lg px-4 fw-bold" style="color: #0d6efd;">شروع کنید</a>
+            <span class="badge-pill d-inline-block mb-3 text-white">
+                <i class="bi bi-stars me-1"></i> Smart Shift Ledger & Payroll Tracker
+            </span>
+            <h1 class="display-3 mb-3">Simplify Your Shifts, Track Your Earnings</h1>
+            <p class="lead text-white-50 mx-auto mb-4" style="max-width: 680px;">
+                An all-in-one shift management solution designed for multi-employer logs, automated wage calculations, and seamless time tracking.
+            </p>
+            <a href="#subscribe" class="btn btn-light btn-lg px-4 py-2 fw-semibold text-primary rounded-pill shadow">
+                Get Early Access <i class="bi bi-arrow-right ms-1"></i>
+            </a>
         </div>
     </header>
 
     <!-- Features Section -->
-    <section class="py-5">
+    <section class="py-5 my-4">
         <div class="container">
-            <h2 class="text-center fw-bold mb-5">ویژگی‌های کلیدی Easio</h2>
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Designed for Flexible Workflows</h2>
+                <p class="text-muted">Everything you need to keep your working hours and income organized.</p>
+            </div>
             <div class="row g-4">
+                <!-- Feature 1 -->
                 <div class="col-md-4">
-                    <div class="card feature-card shadow-sm h-100 p-4 text-center">
-                        <h4 class="fw-bold mb-3">ثبت سریع شیفت‌ها</h4>
-                        <p class="text-muted">ثبت و برنامه‌ریزی آسان شیفت‌های کاری چندگانه تنها با چند کلیک ساده.</p>
+                    <div class="card card-feature h-100 p-4">
+                        <div class="icon-wrapper">
+                            <i class="bi bi-briefcase"></i>
+                        </div>
+                        <h4 class="fw-bold fs-5 mb-2">Multi-Employer Logs</h4>
+                        <p class="text-muted mb-0">Easily manage and switch between multiple workplaces or employers within a single intuitive interface.</p>
                     </div>
                 </div>
+                <!-- Feature 2 -->
                 <div class="col-md-4">
-                    <div class="card feature-card shadow-sm h-100 p-4 text-center">
-                        <h4 class="fw-bold mb-3">محاسبه خودکار درآمد</h4>
-                        <p class="text-muted">محاسبه دقیق حقوق و دستمزد بر اساس ساعت کاری، اضافه کاری و کارفرماهای مختلف.</p>
+                    <div class="card card-feature h-100 p-4">
+                        <div class="icon-wrapper">
+                            <i class="bi bi-calculator"></i>
+                        </div>
+                        <h4 class="fw-bold fs-5 mb-2">Automated Payroll Calculation</h4>
+                        <p class="text-muted mb-0">Instant total earnings breakdown based on hourly rates, overtime, and specific job parameters.</p>
                     </div>
                 </div>
+                <!-- Feature 3 -->
                 <div class="col-md-4">
-                    <div class="card feature-card shadow-sm h-100 p-4 text-center">
-                        <h4 class="fw-bold mb-3">گزارش‌دهی جامع</h4>
-                        <p class="text-muted">دریافت خروجی‌های دقیق از کارکرد ماهانه و سالانه جهت مدیریت بهتر زمان و مالی.</p>
+                    <div class="card card-feature h-100 p-4">
+                        <div class="icon-wrapper">
+                            <i class="bi bi-graph-up-arrow"></i>
+                        </div>
+                        <h4 class="fw-bold fs-5 mb-2">Detailed Reports & History</h4>
+                        <p class="text-muted mb-0">Generate comprehensive monthly or yearly logs to keep complete control over your working schedule.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact / Newsletter Section -->
-    <section id="contact" class="bg-white py-5 shadow-sm">
-        <div class="container text-center" style="max-width: 600px;">
-            <h3 class="fw-bold mb-3">اطلاع از زمان انتشار رسمی</h3>
-            <p class="text-muted mb-4">ایمیل خود را ثبت کنید تا اولین نفری باشید که از انتشار نرم‌افزار مطلع می‌شوید.</p>
-            <form action="https://formspree.io/f/mzdnojbl" method="POST" class="input-group mb-3">
-                <input type="email" name="email" class="form-control" placeholder="ایمیل خود را وارد کنید..." required dir="ltr">
-                <button class="btn btn-primary px-4" type="submit">ثبت نام</button>
-            </form>
+    <!-- Multilingual Support Section -->
+    <section class="py-5 bg-white border-top border-bottom">
+        <div class="container text-center">
+            <h3 class="fw-bold mb-3">Global Compatibility</h3>
+            <p class="text-muted mb-4">Built to support international users with full multi-language capabilities, including RTL layouts.</p>
+            <div>
+                <span class="lang-badge"><i class="bi bi-globe me-1"></i> English</span>
+                <span class="lang-badge">فارسی (Persian)</span>
+                <span class="lang-badge">العربية (Arabic)</span>
+                <span class="lang-badge">Türkçe (Turkish)</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Waitlist / Subscription Section -->
+    <section id="subscribe" class="py-5 my-5">
+        <div class="container" style="max-width: 650px;">
+            <div class="subscribe-card p-4 p-md-5 text-center shadow-sm">
+                <h3 class="fw-bold mb-2">Join the Waitlist</h3>
+                <p class="text-muted mb-4">Be the first to know when Easio is available on the App Store and Google Play.</p>
+                
+                <form action="https://formspree.io/f/mzdnojbl" method="POST" class="row g-2">
+                    <div class="col-md-8">
+                        <input type="email" name="email" class="form-control form-control-lg fs-6" placeholder="Enter your email address..." required>
+                    </div>
+                    <div class="col-md-4">
+                        <button type="submit" class="btn btn-primary btn-lg w-100 fs-6 fw-semibold">Subscribe</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="text-center">
         <div class="container">
-            <p class="mb-0">&copy; 2026 Easio. تمامی حقوق محفوظ است.</p>
+            <p class="mb-0">&copy; 2026 Easio. All rights reserved.</p>
         </div>
     </footer>
 
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
